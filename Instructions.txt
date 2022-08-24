@@ -1,0 +1,21 @@
+Goal - Implement the Cache class to satisfy the tests in the Main.
+
+Part 1:
+
+Implement the Cache class to cache requests for values of the store. The cache is
+initialized with a max size; requests for keys after the cache is filled should
+evict the first item added to the cache and cache the new item. If the item is cached,
+the store should not be accessed.
+
+Part 2:
+
+Improve the eviction implementation to evict items based on the last access of the item
+in the cache. 
+
+For example:
+
+Store contains - [Item1, Item2, Item3, Item4, Item5]
+Cache contains - [Item1, Item2, Item3]
+
+If Item3 and then Item1 are fetched, a request for Item4 should see Item2 evicted and Item4
+cached. Then, if Item5 is fetched, Item3 should be evicted and Item5 cached.
